@@ -14,6 +14,9 @@
 		A82772371D4C59DA00908087 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A82772351D4C59DA00908087 /* LaunchScreen.storyboard */; };
 		A82772421D4C59DA00908087 /* SortingCharTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82772411D4C59DA00908087 /* SortingCharTests.swift */; };
 		A827724D1D4C59DA00908087 /* SortingCharUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A827724C1D4C59DA00908087 /* SortingCharUITests.swift */; };
+		A827725B1D4C5BEA00908087 /* Sorter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A827725A1D4C5BEA00908087 /* Sorter.swift */; };
+		A827725D1D4C882200908087 /* SortControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A827725C1D4C882200908087 /* SortControllerTests.swift */; };
+		A827725F1D4C8B6500908087 /* SortController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A827725E1D4C8B6500908087 /* SortController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		A82772481D4C59DA00908087 /* SortingCharUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SortingCharUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A827724C1D4C59DA00908087 /* SortingCharUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortingCharUITests.swift; sourceTree = "<group>"; };
 		A827724E1D4C59DA00908087 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A827725A1D4C5BEA00908087 /* Sorter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sorter.swift; sourceTree = "<group>"; };
+		A827725C1D4C882200908087 /* SortControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SortControllerTests.swift; sourceTree = "<group>"; };
+		A827725E1D4C8B6500908087 /* SortController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SortController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +109,8 @@
 				A82772331D4C59DA00908087 /* Assets.xcassets */,
 				A82772351D4C59DA00908087 /* LaunchScreen.storyboard */,
 				A82772381D4C59DA00908087 /* Info.plist */,
+				A827725A1D4C5BEA00908087 /* Sorter.swift */,
+				A827725E1D4C8B6500908087 /* SortController.swift */,
 			);
 			path = SortingChar;
 			sourceTree = "<group>";
@@ -112,6 +120,7 @@
 			children = (
 				A82772411D4C59DA00908087 /* SortingCharTests.swift */,
 				A82772431D4C59DA00908087 /* Info.plist */,
+				A827725C1D4C882200908087 /* SortControllerTests.swift */,
 			);
 			path = SortingCharTests;
 			sourceTree = "<group>";
@@ -135,6 +144,7 @@
 				A82772251D4C59D900908087 /* Sources */,
 				A82772261D4C59D900908087 /* Frameworks */,
 				A82772271D4C59D900908087 /* Resources */,
+				A82772621D4C9F1B00908087 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -260,13 +270,31 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		A82772621D4C9F1B00908087 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A82772251D4C59D900908087 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A827725B1D4C5BEA00908087 /* Sorter.swift in Sources */,
 				A827722F1D4C59DA00908087 /* ViewController.swift in Sources */,
 				A827722D1D4C59DA00908087 /* AppDelegate.swift in Sources */,
+				A827725F1D4C8B6500908087 /* SortController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +303,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A82772421D4C59DA00908087 /* SortingCharTests.swift in Sources */,
+				A827725D1D4C882200908087 /* SortControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

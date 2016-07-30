@@ -10,27 +10,37 @@ import XCTest
 @testable import SortingChar
 
 class SortingCharTests: XCTestCase {
-    
+
+    var sorter: Sorter!
+
     override func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        sorter = Sorter()
     }
-    
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
+
+    func testInputCatShouldBeAct() {
+        let result = sorter.sort(input: "cat")
+        XCTAssertEqual(result, "act")
     }
-    
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+
+    func testInputDogShouldBeDgo() {
+        let result = sorter.sort(input: "dog")
+        XCTAssertEqual(result, "dgo")
     }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+
+    func testInputHorseShouldBeEhors() {
+        let result = sorter.sort(input: "horse")
+        XCTAssertEqual(result, "ehors")
     }
-    
+
+    func testInputUpperHorseShouldBeEhors() {
+        let result = sorter.sort(input: "Horse")
+        XCTAssertEqual(result, "ehors", "upper case failed")
+    }
+
+    func testInputWithWhitespaceShouldNotContainWhitespace() {
+        let result = sorter.sort(input: "hello world")
+        XCTAssertEqual(result, "dehllloorw")
+    }
+
 }
