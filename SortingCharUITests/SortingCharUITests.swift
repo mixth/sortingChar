@@ -14,7 +14,6 @@ class SortingCharUITests: XCTestCase {
         super.setUp()
         continueAfterFailure = false
         XCUIApplication().launch()
-
     }
 
     override func tearDown() {
